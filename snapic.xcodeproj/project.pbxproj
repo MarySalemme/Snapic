@@ -13,6 +13,7 @@
 		1A18E8382358613200E90FF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A18E8372358613200E90FF5 /* Assets.xcassets */; };
 		1A18E83B2358613200E90FF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A18E8392358613200E90FF5 /* LaunchScreen.storyboard */; };
 		1A18E8462358613300E90FF5 /* snapicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A18E8452358613300E90FF5 /* snapicTests.swift */; };
+		1A18E85123586CF900E90FF5 /* image.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1A18E85023586CF800E90FF5 /* image.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		1A18E8412358613300E90FF5 /* snapicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = snapicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A18E8452358613300E90FF5 /* snapicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snapicTests.swift; sourceTree = "<group>"; };
 		1A18E8472358613300E90FF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A18E85023586CF800E90FF5 /* image.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				1A18E8322358613100E90FF5 /* ViewController.swift */,
 				1A18E8342358613100E90FF5 /* Main.storyboard */,
 				1A18E8372358613200E90FF5 /* Assets.xcassets */,
+				1A18E85023586CF800E90FF5 /* image.JPG */,
 				1A18E8392358613200E90FF5 /* LaunchScreen.storyboard */,
 				1A18E83C2358613200E90FF5 /* Info.plist */,
 			);
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A18E83B2358613200E90FF5 /* LaunchScreen.storyboard in Resources */,
+				1A18E85123586CF900E90FF5 /* image.JPG in Resources */,
 				1A18E8382358613200E90FF5 /* Assets.xcassets in Resources */,
 				1A18E8362358613100E90FF5 /* Main.storyboard in Resources */,
 			);
