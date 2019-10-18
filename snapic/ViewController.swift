@@ -11,7 +11,13 @@ import Foundation
 
 class ViewController: UIViewController {
 
+    var context: CIContext!
+    var filter: CIFilter!
+    var originalImage: CIImage!
+    
     @IBOutlet var imageView: UIImageView!
+    
+    @IBOutlet var amountSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +26,12 @@ class ViewController: UIViewController {
 
         let originalImage = CIImage(contentsOf: filePath!)
 
-        let filter = CIFilter(name: "CISepiaTone")
-        filter?.setValue(originalImage, forKey: kCIInputImageKey)
-        filter?.setValue(0.5, forKey: kCIInputIntensityKey)
-        guard let newImage = filter?.outputImage else {
-            return
-        }
+        filter = CIFilter(name: "CISepiaTone")
+        filter.setValue(originalImage, forKey: kCIInputImageKey)
+        filter.setValue(0.5, forKey: kCIInputIntensityKey)
         
-        let image = convert(ciImage: newImage)
+        let newImage = filter.outputImage
+        let image = convert(ciImage: newImage!)
 
         DispatchQueue.main.async {
             self.imageView.image = image
@@ -35,10 +39,18 @@ class ViewController: UIViewController {
     }
     
     func convert(ciImage:CIImage) -> UIImage {
-        let context: CIContext = CIContext.init(options: nil)
+        context = CIContext.init(options: nil)
         let cgImage: CGImage = context.createCGImage(ciImage, from: ciImage.extent)!
         let image: UIImage = UIImage.init(cgImage: cgImage)
         return image
+    }
+    
+    @IBAction func amountSliderValueChanged(_ sender: UISlider) {
+        
+        let sliderValue = sender.value
+        filter.setValue(sliderValue, forKey: kCIInputIntensityKey)
+        let newImage = filter.outputImage
+        self.imageView.image = convert(ciImage: newImage!)
     }
 }
 
